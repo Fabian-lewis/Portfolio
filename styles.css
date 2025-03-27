@@ -184,37 +184,25 @@ nav .navlinks li a {
     text-transform: uppercase;
 }
 
-.hero-skills ul, 
-.hero-hobbies ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
+.hero-skills .skill{
+    margin:10px 0;
     width: 100%;
 }
-
-.hero-skills ul li, 
-.hero-hobbies ul li {
+.skill-name{
     font-size: 16px;
-    margin: 8px 0;
-    padding-left: 25px;
-    position: relative;
-    text-align: left;
+    margin-bottom: 5px;
 }
-
-.hero-skills ul li::before {
-    content: "⚡";
-    position: absolute;
-    left: 0;
-    font-size: 16px;
-    color: #00ffff;
+.skill-bar{
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
 }
-
-.hero-hobbies ul li::before {
-    content: "🏓";
-    position: absolute;
-    left: 0;
-    font-size: 16px;
-    color: #00ffff;
+.skill-level {
+    height: 100%;
+    width: 0;
+    background: #007ced;
+    transition: width 1.5s ease-in;
 }
 
 .hero-projects {
@@ -245,11 +233,44 @@ nav .navlinks li a {
 .project-card {
     width: 100%;
     background: #222;
-    padding: 12px;
+    padding: 15px;
     margin: 10px 0;
     border-radius: 7px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     text-align: left;
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007ced;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.project-link:hover {
+    background: #005bb5;
+}
+
+
+.hero-hobbies .hobby {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.hero-hobbies .hobby i {
+    margin-right: 10px;
+
 }
 
 .hero-aboutme {
@@ -287,6 +308,11 @@ nav .navlinks li a {
     border: 2px solid #e5e5e5;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
     font-size: 14px;
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s;
+}
+.btn-group .btn:hover {
+    background-color: #005bb5; /* Darker shade on hover */
 }
 
 .btn.active {
