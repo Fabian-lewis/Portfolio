@@ -17,7 +17,7 @@ Welcome to my **personal developer portfolio**! This is a showcase of my skills,
 - **Frontend**: HTML, CSS, JavaScript  
 - **Styling**: CSS animations, flexbox, and grid  
 - **Icons & Fonts**: FontAwesome, Google Fonts  
-- **Deployment**: GitHub Pages _(optional: Netlify, Vercel, etc.)_  
+- **Deployment**: Netlify  
 
 ---
 
