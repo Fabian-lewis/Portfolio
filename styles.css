@@ -4,10 +4,18 @@
     margin: 0;
     font-family: poppins, sans-serif;
     text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 body {
     overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+body::-webkit-scrollbar {
+    width: 0;
 }
 
 .hero-header {
@@ -99,14 +107,7 @@ nav .navlinks li a {
     flex-wrap: wrap;
 }
 
-.container-2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-top: 2rem;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+
 
 .container .hero-pic {
     width: 300px;
@@ -137,7 +138,8 @@ nav .navlinks li a {
 
 .hero-text h3 {
     color: #e5e5e5;
-    font-size: 0.8rem;
+    font-size: 1.rem;
+    font-family: sans-serif;
 }
 
 .hero-text h5 span {
@@ -147,30 +149,169 @@ nav .navlinks li a {
 
 .hero-text h1 {
     color: #007ced;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 10px 0;
+    font-family: sans-serif;
 }
 
 .hero-text p {
     color: #e5e5e5;
     font-size: 0.9rem;
 }
+.hero-text .wave {
+    display: inline-block;
+    animation: wave-animation 2s infinite ease-in-out;
+    transform-origin: 70% 70%; /* Adjust pivot point */
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate(20deg); }
+    15% { transform: rotate(45deg); }
+    30% { transform: rotate(5deg); }
+    45% { transform: rotate(25deg); }
+    60% { transform: rotate(5deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.container-2 {
+    margin: 20px;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero-aboutme {
+    max-width: 600px;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    background-color: #222;
+    line-height: 2;
+    display: inline-block;
+}
+
+.hero-aboutme:hover { /* No space before :hover */
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+.connect:hover { /* No space before :hover */
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+.hero-aboutme h2 {
+    font-weight: 700;
+    color: white;
+}
+
+.hero-aboutme p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+.connect {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #222;
+    color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.connect h2 {
+    font-size: 24px;
+    color: #007ced;
+}
+
+.connect p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.connect .input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.connect label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.connect input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #2a2a3a;
+    color: #fff;
+    font-size: 14px;
+}
+
+.connect button {
+    background: #333;
+    color: #222;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.connect button:hover {
+    background: #007ced;
+}
+
+
+
+.container-3 {
+    margin: 20px;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 3px solid #222;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #222;
+}
+
+.skills-hobbies-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch; 
+    flex-wrap: wrap; 
+    gap: 20px;
+    width: 100%; 
+}
 
 .hero-skills, 
 .hero-hobbies {
-    margin: 10px 0;
-    width: 100%;
-    max-width: 300px;
+    flex: 1; 
+    min-width: 250px;
+    max-width: 400px;
     min-height: 350px;
     display: flex;
-    border-radius: 7px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     border-radius: 10px;
     background: #111;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
     text-align: center;
     color: #fff;
     padding: 15px;
@@ -208,7 +349,7 @@ nav .navlinks li a {
 .hero-projects {
     margin: 30px auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     min-height: auto;
     display: flex;
     flex-direction: column;
@@ -234,6 +375,8 @@ nav .navlinks li a {
     width: 100%;
     background: #222;
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
     margin: 10px 0;
     border-radius: 7px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
@@ -271,25 +414,6 @@ nav .navlinks li a {
 .hero-hobbies .hobby i {
     margin-right: 10px;
 
-}
-
-.hero-aboutme {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    padding: 0 15px;
-}
-
-.hero-aboutme h2 {
-    color: #007ced;
-    font-size: 16px;
-}
-
-.hero-aboutme p {
-    color: #e5e5e5;
-    font-size: 1rem;
-    margin-top: 10px;
 }
 
 .btn-group {
