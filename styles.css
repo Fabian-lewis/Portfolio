@@ -242,6 +242,7 @@ nav .navlinks li a {
     background-color: #111;
     line-height: 2;
     display: inline-block;
+    min-width: none;
 }
 .hero-aboutme .p{
     color: #005bb5;
@@ -252,9 +253,6 @@ nav .navlinks li a {
     transform: translateY(-5px);
     box-shadow: 0px 0px 20px rgba(67, 142, 241, 0.419);
 }
-
-
-
 
 .hero-aboutme h3 {
     font-weight: 1.2rem;
@@ -282,8 +280,9 @@ nav .navlinks li a {
 }
 
 .hero-skills{
+    flex-grow: 1;
     align-self: center;
-    min-width: 600px;
+    min-width: 300px;
     max-width: 800px;
     min-height: 350px;
     display: flex;
@@ -303,7 +302,7 @@ nav .navlinks li a {
 }
 
 .hero-hobbies {
-    min-width: 200px;
+    flex: 1;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -316,6 +315,7 @@ nav .navlinks li a {
     padding: 50px;
 }
 .hobbies-container {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 4 items per row */
     grid-template-rows: repeat(2, auto); /* 2 rows */
@@ -325,13 +325,15 @@ nav .navlinks li a {
 }
 
 .hobby {
+    flex-grow: 1;
     display: flex;
+    min-width: 50px;
+    min-height:50px;
     width: 250px;
     height: 250px;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    
     color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -442,7 +444,6 @@ nav .navlinks li a {
     justify-content: space-between;
     align-items: center;
     /* Control the width of each card (adjustable based on available space) */
-    min-width: 500px;
     margin: 10px; /* Optional spacing between cards */
     background-color: #111; /* Darker background for cards */
     padding: 20px; /* Increased padding */
@@ -457,6 +458,7 @@ nav .navlinks li a {
 }
 
 .project-card .image img {
+
     width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Rounded corners for images */
@@ -747,7 +749,7 @@ footer {
     }
 }
 
-@media (max-width: 360px) {
+@media(max-width:360px){
     .container .hero-pic {
         width: 200px;
         height: 200px;
@@ -760,8 +762,6 @@ footer {
     nav .navlinks {
         width: 80%;
     }
-}
-@media(max-width:360px){
     .container{
         flex-direction: column;
         padding-top:2rem
@@ -772,10 +772,82 @@ footer {
     }
     .container-3{
         flex-direction: column;
-        padding-top:2rem
+        padding-top:2rem;
+        width:100%;
+        gap: 100px;
+    }
+    .container-3 h2{
+        font-size: 25px;
+        font-weight: bold;
     }
     .hero-text{
         padding:40px 0px;
     }
+    .hero-aboutme{
+        width: 250px;
+        font-size: 10px;
+        align-self:center;
+    }
+    .hobbies-container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-items: center;
+        margin-top: 20px;
+    }
+    .hobby{
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+    }
+    .hobby i {
+        font-size: 10px;
+    }
+    .hero-skills{
+        display: flex;
+        width: 250px;
+        height: auto;
+        font-size: 20px;
+
+    }
+    .hero-skills .skill {
+        width: 80%;
+    }
+    .skill-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+    }
     
+    .skill-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .skill-percentage {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        padding: 3px 6px;
+        border-radius: 3px;
+    }
+    
+    .skill-bar {
+        background: #444;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 10px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .skill-level {
+        height: 100%;
+        width: 0;
+        background: #007ced;
+        transition: width 1.5s ease-in;
+        border-radius: 5px;
+    }
 }
