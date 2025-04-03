@@ -297,15 +297,6 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
-        // Creating a click to show and hide the navlinks
-        var togglebtn =  document.querySelector('.togglebtn');
-        var nav = document.querySelector('.navlinks');
-        var links = document.querySelector('.navlinks li');
-
-        togglebtn.addEventListener('click', function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        });
 
         // Creating a typing effect
         var typed = new Typed(".input", {
@@ -322,7 +313,7 @@
             loop: true
         });
 
-         // Creating a click to show and hide the navlinks
+        // Creating a click to show and hide the navlinks
          var togglebtn =  document.querySelector('.togglebtn');
         var nav = document.querySelector('.navlinks');
         var links = document.querySelector('.navlinks li');
@@ -350,6 +341,7 @@
             backSpeed: 50,
             loop: true
         });
+
 
         // Creating a skill bar
         document.addEventListener("DOMContentLoaded", function() {
@@ -379,6 +371,8 @@
         });
     }, 500);
 });
+
+
 
     </script>
 </body>
