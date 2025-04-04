@@ -52,7 +52,7 @@ git clone https://github.com/Fabian-lewis/My_Portfolio.git
 
 ## 📬 Contact Me
 📧 **Email:** your-email@example.com  
-🔗 **Portfolio:** [your-portfolio-link.com](#)  
+🔗 **Portfolio:** [your-portfolio-link.com](https://fabian-ndush.netlify.app/)  
 
 🐙 **GitHub:** https://github.com/Fabian-lewis
 💼 **LinkedIn:** [linkedin.com/in/your-profile](https://www.linkedin.com/in/fabian-ndungu)  
