@@ -46,7 +46,10 @@ git clone https://github.com/Fabian-lewis/My_Portfolio.git
 ---
 
 ## 📸 Screenshots
-![Portfolio Screenshot](assets/portfolio-preview.png)  
+![Portfolio Screenshot](assets/portfolio_screenshot_1.JPG)  
+![Portfolio Screenshot](assets/portfolio_screenshot_2.JPG) 
+![Portfolio Screenshot](assets/portfolio_screenshot_3.JPG) 
+![Portfolio Screenshot](assets/portfolio_screenshot_4.JPG) 
 
 ---
 
