@@ -46,13 +46,16 @@ git clone https://github.com/Fabian-lewis/My_Portfolio.git
 ---
 
 ## 📸 Screenshots
-![Portfolio Screenshot](assets/portfolio-preview.png)  
+![Portfolio Screenshot](assets/portfolio_screenshot_1.JPG)  
+![Portfolio Screenshot](assets/portfolio_screenshot_2.JPG) 
+![Portfolio Screenshot](assets/portfolio_screenshot_3.JPG) 
+![Portfolio Screenshot](assets/portfolio_screenshot_4.JPG) 
 
 ---
 
 ## 📬 Contact Me
-📧 **Email:** your-email@example.com  
-🔗 **Portfolio:** [your-portfolio-link.com](#)  
+📧 **Email:** my-email@example.com  
+🔗 **Portfolio:** [my-portfolio-link.com](https://fabian-ndush.netlify.app/)  
 
 🐙 **GitHub:** https://github.com/Fabian-lewis
 💼 **LinkedIn:** [linkedin.com/in/your-profile](https://www.linkedin.com/in/fabian-ndungu)  
