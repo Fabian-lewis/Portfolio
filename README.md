@@ -55,7 +55,7 @@ git clone https://github.com/Fabian-lewis/My_Portfolio.git
 🔗 **Portfolio:** [your-portfolio-link.com](#)  
 
 🐙 **GitHub:** https://github.com/Fabian-lewis
-💼 **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/)  
+💼 **LinkedIn:** [linkedin.com/in/your-profile](https://www.linkedin.com/in/fabian-ndungu)  
 
 ---
 

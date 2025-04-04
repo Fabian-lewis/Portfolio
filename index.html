@@ -50,7 +50,7 @@
                         <div class="social">
                             <a href="mailto: fabitolewi@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                             
-                            <a href="www.linkedin.com/in/fabian-ndungu"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/fabian-ndungu"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="https://github.com/Fabian-lewis"><i class="fa-brands fa-github"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         </div>
@@ -272,10 +272,9 @@
                 </div>
                 
             </main>
-            
-            
-            
+             
         </div>
+
         <footer>
             <div class="footer-content">
                 <h3>Soft Eng Fabian</h3>
@@ -283,7 +282,7 @@
                 <div class="social">
                     <a href="mailto: fabitolewi@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                     
-                    <a href="www.linkedin.com/in/fabian-ndungu"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/fabian-ndungu"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/Fabian-lewis"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
@@ -293,6 +292,7 @@
                 <a href="#" id="backToTop">Back to Top</a>
             </div>
         </footer>
+
     </div>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
@@ -345,34 +345,42 @@
 
         // Creating a skill bar
         document.addEventListener("DOMContentLoaded", function() {
-    const skills = [
-        { name: "HTML", level: 90 },
-        { name: "CSS", level: 80 },
-        { name: "JavaScript", level: 75 },
-        { name: "PHP", level: 70 },
-        { name: "PostgreSQL", level: 60 },
-        { name: "Python", level: 85 },
-        { name: "Java", level: 60 },
-        { name: "GIT", level: 50 }
-    ];
+        const skills = [
+            { name: "HTML", level: 90 },
+            { name: "CSS", level: 80 },
+            { name: "JavaScript", level: 75 },
+            { name: "PHP", level: 70 },
+            { name: "PostgreSQL", level: 60 },
+            { name: "Python", level: 85 },
+            { name: "Java", level: 60 },
+            { name: "GIT", level: 50 }
+        ];
 
-    setTimeout(() => {
-        skills.forEach(skill => {
-            document.querySelectorAll('.skill-name').forEach(element => {
-                if (element.textContent.trim() === skill.name) {
-                    const skillContainer = element.parentElement.parentElement;
-                    const skillLevelElement = skillContainer.querySelector('.skill-level');
-                    const percentageLabel = skillContainer.querySelector('.skill-percentage');
-                    
-                    skillLevelElement.style.width = skill.level + '%';
-                    percentageLabel.textContent = skill.level + '%';
-                }
+        setTimeout(() => {
+            skills.forEach(skill => {
+                document.querySelectorAll('.skill-name').forEach(element => {
+                    if (element.textContent.trim() === skill.name) {
+                        const skillContainer = element.parentElement.parentElement;
+                        const skillLevelElement = skillContainer.querySelector('.skill-level');
+                        const percentageLabel = skillContainer.querySelector('.skill-percentage');
+                        
+                        skillLevelElement.style.width = skill.level + '%';
+                        percentageLabel.textContent = skill.level + '%';
+                    }
+                });
+                });
+            }, 500);
+        });
+
+        // Scroll to top button
+        const backToTopButton = document.getElementById('backToTop');
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
-    }, 500);
-});
-
-
 
     </script>
 </body>

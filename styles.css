@@ -112,8 +112,6 @@ nav .navlinks li a {
     flex-wrap: wrap;
 }
 
-
-
 .container .hero-pic {
     width: 500px;
     height: 500px;
@@ -282,7 +280,7 @@ nav .navlinks li a {
 .hero-skills {
     width: 80%; /* Make it responsive */
     max-width: 600px; /* Limit the width for large screens */
-    min-width: 250px; /* Ensure it doesn't shrink too much */
+    min-width: 300px; /* Ensure it doesn't shrink too much */
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -304,6 +302,7 @@ nav .navlinks li a {
 .hero-hobbies {
     flex: 1;
     width: auto;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,31 +319,36 @@ nav .navlinks li a {
     grid-template-columns: repeat(3, 1fr); /* 4 items per row */
     grid-template-rows: repeat(2, auto); /* 2 rows */
     gap: 15px;
-    justify-items: center;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
 .hobby {
     flex-grow: 1;
+    flex-shrink: 1;
     display: flex;
     min-width: 50px;
-    min-height:50px;
-    width: 250px;
-    height: 250px;
+    min-height: 50px;
+    width: 20vw; /* Responsive width */
+    height: 20vw; /* Responsive height */
+    max-width: 250px;
+    max-height: 250px;
     align-items: center;
     justify-content: center;
     gap: 8px;
     color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    font-size: 25px;
+    font-size: 1.5vw; /* Font scales with screen */
     font-weight: bold;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    padding: 2vw; /* Responsive padding */
 }
 
+
 .hobby i {
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .hobby:hover {
@@ -405,6 +409,7 @@ nav .navlinks li a {
 }
 
 .projects-container{
+    min-width: 300px;
     box-shadow: 0px 0px 20px rgba(67, 142, 241, 0.419);
 }
 
@@ -507,6 +512,7 @@ nav .navlinks li a {
 
 .connect {
     width: 100%;
+    min-width: 300px;
     margin: 40px auto;
     padding: 20px;
     background: #111;
@@ -570,8 +576,6 @@ nav .navlinks li a {
 }
 
 
-
-
 footer {
     background: #111;
     color: #fff;
@@ -614,7 +618,7 @@ footer {
 #backToTop {
     display: block;
     margin-top: 10px;
-    color: #00bcd4;
+    color: #007ced;
     text-decoration: none;
     font-weight: bold;
 }
@@ -701,61 +705,11 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .logo i {
-        height: 35px;
-        width: 35px;
-        font-size: 1rem;
-        padding: 8px;
-    }
-    
-    .logo .logo-text {
-        font-size: 18px;
-    }
-    
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
     
     .container .hero-pic {
-        width: 250px;
-        height: 250px;
-        border-width: 8px;
+        width: 260px;
+        height: 260px;
     }
-    
-    .hero-skills, 
-    .hero-hobbies {
-        min-height: 300px;
-        padding: 10px;
-    }
-    
-    .hero-skills h2, 
-    .hero-hobbies h2 {
-        font-size: 18px;
-    }
-    
-    .hero-skills ul li, 
-    .hero-hobbies ul li {
-        font-size: 14px;
-        padding-left: 20px;
-    }
-    
-    .hero-aboutme p {
-        font-size: 0.9rem;
-    }
-    
-    .btn-group .btn {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-}
-
-@media(max-width:360px){
-    .container .hero-pic {
-        width: 200px;
-        height: 200px;
-    }
-
-    
     .hero-text h1 {
         font-size: 1.5rem;
     }
@@ -772,10 +726,12 @@ footer {
         padding-top:2rem
     }
     .container-3{
+        margin: 0;
         flex-direction: column;
         padding-top:2rem;
         width:100%;
         gap: 100px;
+        align-items: center;
     }
     .container-3 h2{
         font-size: 25px;
@@ -785,9 +741,27 @@ footer {
         padding:40px 0px;
     }
     .hero-aboutme{
-        width: 250px;
+        width: 400px;
         font-size: 10px;
         align-self:center;
+    }
+    .projects-container{
+        align-items: center;
+        margin: 0;
+        align-self: center;
+        width: 100%;
+    }
+    .project-card{
+        margin: 0;
+        align-self: center;
+        width: 100%;
+    }
+    .hero-projects{
+        align-items: center;
+        margin: 0;
+        align-self: center;
+        width: 100%;
+
     }
     .hobbies-container{
         display: flex;
@@ -795,9 +769,136 @@ footer {
         gap: 15px;
         justify-items: center;
         margin-top: 20px;
+        width: 300px;
+    }
+    .hobby i {
+        font-size: 10px;
+    }
+    .hero-skills{
+        display: flex;
+        width: 250px;
+        height: auto;
+        font-size: 20px;
+
+    }
+    .hero-skills .skill {
+        width: 80%;
+    }
+    .skill-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
+    .skill-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .skill-percentage {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        padding: 3px 6px;
+        border-radius: 3px;
+    }
+    
+    .skill-bar {
+        background: #444;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 10px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .skill-level {
+        height: 100%;
+        width: 0;
+        background: #007ced;
+        transition: width 1.5s ease-in;
+        border-radius: 5px;
+    }
+    .hero-text h2{
+        font-size: 2.2rem;
+    }
+    .connect{
+        align-self: center;
+        margin: 0;
+    }
+
+}
+
+@media(max-width:360px){
+    .container .hero-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav .navlinks {
+        width: 80%;
+    }
+    .container{
+        flex-direction: column;
+        padding-top:2rem
+    }
+    .container-2{
+        flex-direction: column;
+        padding-top:2rem
+    }
+    .container-3{
+        margin: 0;
+        flex-direction: column;
+        padding-top:2rem;
+        width:100%;
+        gap: 100px;
+        align-items: center;
+    }
+    .container-3 h2{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .hero-text{
+        padding:40px 0px;
+    }
+    .hero-aboutme{
+        width: 300px;
+        font-size: 10px;
+        align-self:center;
+    }
+    .projects-container{
+        width: 300px;
+        align-items: center;
+        margin: 0;
+        align-self: center;
+    }
+    .project-card{
+        margin: 0;
+        align-self: center;
+        width: 100%;
+    }
+    .hero-projects{
+        align-items: center;
+        margin: 0;
+        align-self: center;
+        width: 300px;
+
+    }
+    .hobbies-container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-items: center;
+        margin-top: 20px;
+        width: 300px;
     }
     .hobby{
-        width: 50px;
+        width: 100%;
         height: 50px;
         font-size: 10px;
     }
@@ -853,5 +954,9 @@ footer {
     }
     .hero-text h2{
         font-size: 2.2rem;
+    }
+    .connect{
+        align-self: center;
+        margin: 0;
     }
 }
